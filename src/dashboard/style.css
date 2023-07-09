@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap');
+@config "../../tailwind.admin.config.js";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn{
+        @apply inline-block px-6 py-2.5 rounded shadow-lg }
+
+    .btn-primary{
+        @apply 
+        bg-blue-600
+        text-white  text-sm 
+        leading-tight  
+        hover:bg-purple-700 hover:shadow-lg
+        focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 
+        active:bg-purple-800 active:shadow-lg 
+        transition duration-150 ease-in-out
+    }
+
+    .sidebar {
+        @apply absolute text-base bg-slate-100 left-0 top-0 z-[9999] flex h-screen w-64 flex-col overflow-y-hidden duration-300 ease-linear lg:static lg:translate-x-0 -translate-x-full
+    }
+
+    .sidebar-link {
+        @apply relative flex items-center gap-2.5 rounded-md py-2 px-4  duration-300 ease-in-out hover:bg-slate-400 
+    }
+
+    .sidebar-dropdown-link {
+        @apply justify-start gap-x-5 py-1.5 relative flex items-center gap-y-2  px-3  duration-300 ease-in-out  hover:bg-slate-300 
+    }
+
+
+    .header{
+        @apply
+        sticky top-0 flex w-full bg-primary bg-opacity-80 backdrop-blur
+    }
+
+    .profile-dropdown-link{
+        @apply 
+            flex items-center text-xs gap-3.5 p-2  duration-300 ease-in-out rounded-lg 
+            hover:text-slate-100 hover:bg-blue-400 lg:text-base
+        
+    }
+}
