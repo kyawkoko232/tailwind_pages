@@ -45,3 +45,24 @@
         
     }
 }
+
+.dropdown{
+    
+}
+
+.dropdown-button{
+
+}
+
+.dropdown-menu {
+    transition: opacity 0.5s, transform 0.5s;
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+}

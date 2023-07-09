@@ -38,7 +38,7 @@
 
                         <ul class="mb-6 flex flex-col gap-1.5">
                             <!-- Menu Item Dashboard -->
-                            <li>
+                            <li class="dropdown">
                                 <a class="sidebar-link" href="#">
                                     <svg class="fill-current" width="18" height="18" viewBox="0 0 18 18" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -68,7 +68,7 @@
                                 </a>
 
                                 <!-- Dropdown Menu Start -->
-                                <div class="overflow-hidden ">
+                                <div class="overflow-hidden  dropdown-menu">
                                     <ul class="py-1 flex flex-col pl-6">
                                         
                                         <li class="border-l border-slate-300">
@@ -477,19 +477,19 @@
                         </ul>
 
                         <!-- User Area -->
-                        <div class="relative ">
-                            <a class="flex items-center gap-4" href="#">
+                        <div class="relative dropdown ">
+                            <button class="flex items-center dropdown-button gap-4" href="#">
                                 <span class="hidden text-right lg:block text-white">
                                     <span class="block text-sm font-medium">Thomas
                                         Anree</span>
                                     <span class="block text-xs font-medium">UX Designer</span>
                                 </span>
 
-                                <span class="h-12 w-12 rounded-full">
+                                <div class="h-12 w-12 dropdown rounded-full">
                                     <img class="rounded-full"
                                         src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80"
                                         alt="User">
-                                </span>
+                                </div>
 
                                 <svg :class="dropdownOpen &amp;&amp; 'rotate-180'" class="hidden fill-current sm:block"
                                     width="12" height="8" viewBox="0 0 12 8" fill="none"
@@ -498,11 +498,11 @@
                                         d="M0.410765 0.910734C0.736202 0.585297 1.26384 0.585297 1.58928 0.910734L6.00002 5.32148L10.4108 0.910734C10.7362 0.585297 11.2638 0.585297 11.5893 0.910734C11.9147 1.23617 11.9147 1.76381 11.5893 2.08924L6.58928 7.08924C6.26384 7.41468 5.7362 7.41468 5.41077 7.08924L0.410765 2.08924C0.0853277 1.76381 0.0853277 1.23617 0.410765 0.910734Z"
                                         fill=""></path>
                                 </svg>
-                            </a>
+                            </button>
 
                             <!-- Dropdown Start -->
-                            <div class="absolute  right-0 mt-4 flex w-62 flex-col rounded-lg border  border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark"
-                                style="display: hidden;">
+                            <div class="absolute  dropdown-menu  right-0 mt-4 flex md:w-62 w-[200px] flex-col rounded-lg border  border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark"
+                                >
                                 <ul class="flex text-xs flex-col border-stroke p-3">
                                     <li>
                                         <a href="profile.html" class="profile-dropdown-link">
