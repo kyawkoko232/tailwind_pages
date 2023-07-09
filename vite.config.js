@@ -13,8 +13,8 @@ export default {
     build: {   
         rollupOptions: {
             input: {
-                index: 'index.html',
-                blog:  'blog.html',  
+                index: 'src/index.html',
+                dasboard:  'src/dashboard/index.html',  
               },
     
         },
