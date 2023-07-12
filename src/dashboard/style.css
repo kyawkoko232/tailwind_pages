@@ -21,7 +21,7 @@
     }
 
     .sidebar {
-        @apply absolute text-base bg-slate-100 left-0 top-0 z-[9999] flex h-screen w-64 flex-col overflow-y-hidden duration-300 ease-linear lg:static lg:translate-x-0 -translate-x-full
+        @apply absolute text-base bg-slate-100 left-0 top-0 z-[9999] flex h-screen w-64 flex-col overflow-y-hidden duration-300 ease-linear lg:static 
     }
 
     .sidebar-link {
@@ -46,6 +46,7 @@
     }
 }
 
+
 .dropdown{
     
 }
@@ -65,4 +66,26 @@
     opacity: 1;
     pointer-events: all;
     transform: translateY(0px);
+}
+
+/* ScrollBar  */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(179,29,253);
+    border-radius: 10px;    
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

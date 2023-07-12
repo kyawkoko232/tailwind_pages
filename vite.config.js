@@ -25,7 +25,9 @@ export default {
 
     resolve: {
         alias: {
-          '@node_modules': path.resolve(__dirname, 'node_modules/'),
+          '@': path.resolve(__dirname, './src'),
+          '@assets': path.resolve(__dirname, './src/assets'),
+          '@modules': path.resolve(__dirname, './node_modules/'),
         },
       },
 }
