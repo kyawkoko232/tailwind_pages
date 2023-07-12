@@ -92,23 +92,23 @@
 
 /* ScrollBar အလုံး */
 /* width */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     width: 5px;
-}
+} */
   
 /* Track Scrollbar အပြင် */
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
     background: #E3E2E2;
     border-radius: 10px;
-}
+} */
   
 /* Handle Scrollbar အတွင်း */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
     background: rgb(179,29,253);
     border-radius: 10px;    
-}
+} */
   
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
     background: #555;
-}
+} */
