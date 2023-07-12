@@ -64,7 +64,7 @@
 
     .content {
         @apply
-        bg-black-200 dark:bg-slate-950
+        bg-slate-200 dark:bg-slate-950
     }
 }
 
@@ -90,18 +90,19 @@
     transform: translateY(0px);
 }
 
-/* ScrollBar  */
+/* ScrollBar အလုံး */
 /* width */
 ::-webkit-scrollbar {
     width: 5px;
 }
   
-/* Track */
+/* Track Scrollbar အပြင် */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #E3E2E2;
+    border-radius: 10px;
 }
   
-/* Handle */
+/* Handle Scrollbar အတွင်း */
 ::-webkit-scrollbar-thumb {
     background: rgb(179,29,253);
     border-radius: 10px;    
