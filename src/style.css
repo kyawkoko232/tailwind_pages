@@ -5,6 +5,17 @@
 @tailwind components;
 @tailwind utilities;
 
+
+:root {
+    --blue: #70d6ff;
+    --pink: #ff70a6;
+    --orange : #ff9770;
+    --soft-yellow : #ffd670;
+    --yellow : #e9ff70;
+
+  }
+  
+
 @layer components {
     .btn{
         @apply inline-block px-6 py-2.5 rounded shadow-lg }
@@ -20,3 +31,4 @@
         transition duration-150 ease-in-out
     }
 }
+
