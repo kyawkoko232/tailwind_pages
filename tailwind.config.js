@@ -37,7 +37,7 @@ export default {
           800: "#0a0d12",
           900: "#050609"
         },
-        indigo: {
+        primary: {
           100: "#cfe2ff",
           200: "#9ec5fe",
           300: "#6ea8fe",
