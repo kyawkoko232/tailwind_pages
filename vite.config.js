@@ -16,6 +16,8 @@ export default {
                 index: 'src/index.html',
                 dasboard:  'src/dashboard/index.html',  
                 ios:  'src/ios/index.html',  
+                ios:  'src/ios/sample.html',  
+
 
               },
     

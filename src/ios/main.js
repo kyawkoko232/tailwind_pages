@@ -23,4 +23,6 @@ let swiper = new Swiper(".mySwiper", {
       enabled: true,
     },
   });
-    
+  
+
+  let name =("apple ")
