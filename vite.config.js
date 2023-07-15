@@ -15,6 +15,8 @@ export default {
             input: {
                 index: 'src/index.html',
                 dasboard:  'src/dashboard/index.html',  
+                ios:  'src/ios/index.html',  
+
               },
     
         },
