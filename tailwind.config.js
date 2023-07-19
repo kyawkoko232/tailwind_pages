@@ -3,16 +3,40 @@ export default {
   content: [
     "./src/*.{js,ts,jsx,tsx,html}",
     "./src/**/*.{js,ts,jsx,tsx,html}",
+    "./src/animation/*.{js,ts,jsx,tsx,html}",
   ],
   darkMode: 'class',
   theme: {
     container: {
-    
+
     },
     extend: {
       spacing: {
         'mobile': '1rem',
       },
+      keyframes: {
+        sideways: {
+          "0%": { opacity: 0 },
+          "20%": { opacity: 1 },
+          "80%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+        rotate : {
+          "from" : {
+            transform: "rotate(0deg)",
+          },
+          "to" :{
+            transform: "rotate(360deg)",
+          },
+        }
+        ,
+      },
+      animation: {
+        sideways: "sideways 2s ease-in infinite",
+        rotated : "rotate  1.5s linear infinite",
+
+      },
+
       fontFamily: {
         'roboto': ['Roboto', 'Padauk'],
         'poppins': ['Poppins', 'Padauk']
