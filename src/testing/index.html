@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .menu_btn__burger::before{
+            transform: transl;
+        }
+        .menu_btn.open .menu_btn__burger {
+            transform: translateX(-50px);
+            background: transparent;
+            box-shadow: none;
+
+        }
+
+        .menu_btn.open .menu_btn__burger::before {
+            transform: rotate(45deg) translate(35px, -35px);
+        }
+
+        .menu_btn.open .menu_btn__burger::after {
+            transform: rotate(45deg) translate(35px, -35px);
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+    <div class="p-5 bg-purple-500">
+        <div class="menu-btn open relative flex justify-center items-center w-20 h-20 transition-all duration-300 ease-out border-2 border-slate-800">
+            <div  class="menu_btn__burger w-16 h-1 rounded-lg bg-black-200 
+            before:absolute before:w-16 before:h-1 before:bg-black-200 before:translate-y-[-16px] before:rounded-xl 
+            after:translate-y-[16px] after:absolute after:w-16 after:h-1 after:bg-black-200 after:rounded-xl  
+            ">
+                
+
+            </div>
+        </div>
+    </div>
+    
+    
+
+
+    <script type="module" src="./scrpt.js"></script>
+</body>
+</html>
