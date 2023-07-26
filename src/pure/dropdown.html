@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+
+<style>
+    .dropdown{
+        position: relative;
+
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        left: 0;
+        width: 150px;
+        top: calc(100% + .25rem);
+        background-color: aqua;
+        padding: .75rem;
+        border-radius: .25rem;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    }
+
+    
+    .dropdown.active > .link + .dropdown-menu {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+</style>
+<body>
+    
+    <div class="header inline-flex gap-x-8">
+        <div class="dropdown" data-dropdown >
+            <button class="link" data-dropdown-button >Login </button>
+            <div class="dropdown-menu">
+                <ul>
+                    <li>Hello</li>
+                    <li>Log In</li>
+                    <li>Log Out</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dropdown" data-dropdown >
+            <button class="link" data-dropdown-button >Information </button>
+            <div class="dropdown-menu">
+                <ul>
+                    <li>Hello</li>
+                    <li>Log In</li>
+                    <li>Log Out</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script defer>
+        document.addEventListener('click', e => {
+            const isDropdownButton = e.target.matches("[data-dropdown-button]");
+            if(!isDropdownButton && e.target.closest("[data-dropdown]") != null )return
+
+            let currentDropdown
+            if(isDropdownButton){
+                currentDropdown =e.target.closest('[data-dropdown]')
+                currentDropdown.classList.toggle('active')
+            }
+        
+
+            document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
+                if (dropdown === currentDropdown) return 
+                dropdown.classList.remove('active')
+            })
+
+        })
+    </script>
+</body>
+</html>
