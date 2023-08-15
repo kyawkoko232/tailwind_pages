@@ -31,7 +31,7 @@
     }
 
     .sidebar-link {
-        @apply relative flex items-center gap-2.5 rounded-md py-2 px-4  duration-300 ease-in-out hover:bg-slate-400 
+        @apply relative flex  items-center gap-2.5 rounded-md py-2 px-4  duration-300 ease-in-out hover:bg-slate-400 
     }
 
     .sidebar-button {
@@ -45,8 +45,10 @@
       
     }
 
+    
+
     .sidebar-dropdown-link {
-        @apply justify-start gap-x-5 py-1.5 relative flex items-center gap-y-2  px-3  duration-300 ease-in-out  hover:bg-slate-300 
+        @apply justify-start gap-x-5 py-1.5 relative flex items-center gap-y-2   px-3  duration-300 ease-in-out  hover:bg-slate-300 
     }
 
 
@@ -75,6 +77,18 @@
 
 .dropdown-button{
 
+}
+
+
+
+.sidebar-dropdown-menu {
+    max-height: 0;
+    transition: all 0.8s ease-out;  
+}
+
+.menu-active {
+    max-height: 800px;
+    transition: all 0.8s ease-in;
 }
 
 .dropdown-menu {
