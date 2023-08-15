@@ -12,15 +12,13 @@ export default {
       },
     build: {   
         rollupOptions: {
-            input: {
+            input : {
                 index: 'src/index.html',
                 dasboard:  'src/dashboard/index.html',  
                 ios:  'src/ios/index.html',  
                 sample:  'src/ios/sample.html',  
 
-
               },
-    
         },
         outDir: '../dist',
         emptyOutDir: true,
@@ -34,4 +32,7 @@ export default {
           '@modules': path.resolve(__dirname, './node_modules/'),
         },
       },
+    optimizeDeps: {
+        include: ['./src/*.{js,ts,jsx,tsx,html}',"./src/**/*.{js,ts,jsx,tsx,html}"],
+      }
 }
