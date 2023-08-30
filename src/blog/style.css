@@ -1,34 +1,161 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap');
-@config "../../tailwind.blog.config.js";
 @tailwind base;
 @tailwind components;
+
+@font-face {
+  font-family: 'WAH02Mac.ttf';
+  src: local('WAH02Mac'),
+  url(/fonts/WAH02Mac.ttf) format('ttf');
+}
+
 @tailwind utilities;
 
-
-:root {
-    --blue: #70d6ff;
-    --pink: #ff70a6;
-    --orange : #ff9770;
-    --soft-yellow : #ffd670;
-    --yellow : #e9ff70;
-
-  }
-  
-
 @layer components {
+
+    .nav {
+      @apply
+      mx-auto flex container items-center justify-between py-5 md:px-10 
+      bg-opacity-80 backdrop-blur backdrop-filter
+    }
+
+    .nav-links{
+     @apply 
+     text-sm font-semibold leading-6 light-text dark-text
+    }
+
+    .nav-desktop{
+      @apply hidden lg:flex  lg:gap-x-12
+    }
+
+    .navbar-brand{
+      @apply  -m-1.5 p-1.5 flex justify-center items-center gap-x-2
+    }
+
+    .asidebar {
+      @apply 
+      fixed top-0 left-0 right-0 z-50
+      h-screen overflow-y-auto
+      flex flex-col items-center
+      rounded 
+      transition-all  duration-700
+      md:hidden 
+      w-80 max-w-[calc(100%-3rem)]
+      bg-opacity-60 backdrop-blur backdrop-filter
+    }
+
+    .aside-main {
+      @apply overflow-y-auto px-5 w-full place-items-center min-h-screen
+    }
+
+    .aside-list{
+     @apply flex flex-col list-none p-4 
+    }
+
+    .aside-link {
+      @apply  
+      flex items-center justify-start gap-x-6 
+      lg:text-sm lg:leading-6 font-medium text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300
+      mb-4  
+    }
+
+    .aside-link-content {
+      @apply space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-700
+    }
+
+    .content-link {
+      @apply block  pl-4 -ml-px border-current dark:text-slate-300
+    }
+ 
+
+    .form-label {
+      @apply block text-sm font-semibold leading-6 light-text dark-text
+    }
+
+    .form-control {
+      @apply bg-gray-100 border border-gray-300 
+      text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500
+    }
+  
     .btn{
-        @apply inline-block px-6 py-2.5 rounded shadow-lg }
+        @apply inline-block px-2.5 py-2.5 rounded shadow-lg }
 
     .btn-primary{
         @apply 
         bg-blue-600
-        text-white  text-sm 
+        text-white text-sm 
         leading-tight  
         hover:bg-purple-700 hover:shadow-lg
         focus:bg-purple-700 focus:shadow-lg focus:outline-none focus:ring-0 
         active:bg-purple-800 active:shadow-lg 
         transition duration-150 ease-in-out
     }
+
+    .dark-text{
+      @apply
+      dark:text-slate-300
+    }
+
+    .light-text {
+      @apply
+      text-gray-900
+    }
+
+    .blog {
+      @apply
+      p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 z-0 
+    }
+
+    .blog-category {
+      @apply
+      flex justify-between items-center mb-5 text-gray-500
+    }
+
+    .blog-header{
+     @apply mb-2 text-2xl font-bold tracking-tight light-text dark-text dark:text-white
+    }
+
+    .blog-des {
+      @apply mb-5 font-light text-gray-500 dark:text-gray-400
+    }
+
+    .blog-footer {
+      @apply flex justify-between items-center
+    }
+
+ 
 }
 
+
+.dropdown-menu {
+        position: absolute;
+        opacity: 0;
+        transform: translateY(200%);
+        top: calc(100% + .25rem);
+        transition: opacity 150ms ease-in-out, transform 150ms ease-in-out ;
+        transform: translateY(-10px);
+        z-index : -1;
+      }
+
+      .dropdown.active > .link,
+      .link:hover {
+        
+          
+    }
+        
+
+      .dropdown-menu.active {
+        opacity: 1;
+        pointer-events: none;
+       
+        
+      }
+
+      .dropdown.active  > .link + .dropdown-menu {
+        opacity: 1;
+        transform: translateY(0px);
+        pointer-events: auto;
+        z-index : 1000;
+      }
+
+      

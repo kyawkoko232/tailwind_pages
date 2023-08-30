@@ -2,18 +2,12 @@
 export default {
     content: [
       "./src/components/*.{js,ts,jsx,tsx,html}",
+      "./src/components/**/*.{js,ts,jsx,tsx,html}"
     ],
     darkMode: 'class',
     theme: { 
       container: {
         padding: {
-          DEFAULT: '1rem',
-          sm: '540px',
-          md: '720px',
-          lg: '960px',
-          xl: '1140px',
-          xxl: '1320px'
-        },
       },
       extend: {
         fontFamily:{
