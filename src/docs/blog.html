@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body class="font-poppins ">
+
+
+
+
+<!--Mobile Sidebar control with flex on items-->
+<div class="text-sm">
+    <div class="
+    md:hidden 
+    fixed top-0 left-0 right-0 z-50
+    bg-blue-500 
+    h-screen sidebar overflow-y-auto 
+    flex flex-col justify-start items-center
+    transition-all linear duration-700 translate-x-[-1000px]
+    w-80 max-w-[calc(100%-3rem)]">
+
+
+<!--     Close  Button -->
+        <button type="button" class="absolute sidebar-button z-10 top-5 right-3 w-8 h-8 flex items-center justify-center text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300" 
+        tabindex="0">
+            <span class="sr-only">Close navigation</span>
+            <svg viewBox="0 0 10 10" class="w-4 h-4 overflow-visible">
+                <path d="M0 0L10 10M10 0L0 10" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round"></path>
+            </svg>
+        </button>
+
+<!--        Name -->
+       <span class="text-2xl pt-5">Menu </span>
+
+<!--        Search Hidden on Mobile-->
+            <div class=" z-50 -ml-0.5 pointer-events-none">
+                <div class="bg-white dark:bg-slate-900 relative pointer-events-auto">
+                    <button type="button"
+                            class="hidden w-full lg:flex items-center text-sm leading-6 text-slate-400 rounded-md ring-1 ring-slate-900/10 shadow-sm py-1.5 pl-2 pr-3 hover:ring-slate-300 dark:bg-slate-800 dark:highlight-white/5 dark:hover:bg-slate-700">
+                        <svg width="24" height="24" fill="none" aria-hidden="true" class="mr-3 flex-none">
+                            <path d="m19 19-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"></path>
+                            <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></circle>
+                        </svg>
+                        Quick search...<span class="ml-auto pl-3 flex-none text-xs font-semibold">Ctrl K</span>
+                    </button>
+                </div>
+            </div>
+
+<!--        Hidden Logo -->
+            <div class="overflow-y-auto px-5 w-full place-items-center">
+
+            <ul class="flex flex-col list-none bg-orange-500 p-4 ">
+
+                <li>
+                    <a href="/docs/installation"
+                       class="group flex items-center lg:text-sm lg:leading-6 mb-4 font-semibold text-sky-500 dark:text-sky-400">
+                        <div class="mr-4 rounded-md ring-1 ring-slate-900/5 shadow-sm group-hover:shadow group-hover:ring-slate-900/10 dark:ring-0 dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10 group-hover:shadow-sky-200 dark:group-hover:bg-sky-500 dark:bg-sky-500 dark:highlight-white/10">
+                            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M8.5 7c1.093 0 2.117.27 3 .743V17a6.345 6.345 0 0 0-3-.743c-1.093 0-2.617.27-3.5.743V7.743C5.883 7.27 7.407 7 8.5 7Z"
+                                      class="fill-sky-200 group-hover:fill-sky-500 dark:fill-sky-300 dark:group-hover:fill-sky-300"></path>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M15.5 7c1.093 0 2.617.27 3.5.743V17c-.883-.473-2.407-.743-3.5-.743s-2.117.27-3 .743V7.743a6.344 6.344 0 0 1 3-.743Z"
+                                      class="fill-sky-400 group-hover:fill-sky-500 dark:fill-sky-200 dark:group-hover:fill-sky-200"></path>
+                            </svg>
+                        </div>
+                        စတင်လေ့လာရန်နေရာကောင်း
+                    </a>
+                </li>
+             
+                <li class="mt-12 lg:mt-8">
+                    <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Getting Started</h5>
+                    <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-700">
+                        <li data-active="true"><a
+                                class="block border-l pl-4 -ml-px text-sky-500 border-current font-semibold dark:text-sky-400"
+                                href="/docs/installation">Installation</a></li>
+                        <li>
+                            <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
+                               href="/docs/editor-setup">Editor Setup</a></li>          
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+   
+    </div>
+</div>
+
+
+    <!-- Main NavBar -->
+    <div class="sticky  bg-green-600 top-0 left-0 z-40  ">
+<!--        Header Start -->
+        <div class="max-w-8x-auto  mx-auto dark:bg-pink-700  bg-gray-900 ">
+            <!-- Main Header  -->
+            <div class=" border-b  lg:px-8 lg:border-0 mx-4 lg:mx-0">
+                <div class="relative py-4 ml-4 md:ml-0 flex items-center">
+
+<!--                    Logo -->
+                    <a class=" overflow-hidden  flex justify-center items-center md:w-auto" href="https://www.satekuusaychal.com">
+                    <svg  class="h-10 w-10 mr-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 149.98 147.66"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#5bc096;}.cls-3{fill:#ef7822;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M21.3,70.09c5,1.63,9.4-3.5,11.62-7.29,2.48-4.23,3.87-10,2-14.69a8.66,8.66,0,0,0-1.6-2.62,30.8,30.8,0,0,0,5.87-1.7,26.7,26.7,0,0,0,5.08-2.31c4-2.39,9.68-7,8.54-12.38-1.2-5.59-7.83-6.55-12.5-5.59a25.42,25.42,0,0,0-12.92,7.58c-.64.49-1.25,1-1.83,1.52-2,1.78-3.82,4-3.91,6.83a5.14,5.14,0,0,0,2.59,4.73c-.16.09-.33.17-.49.27-3.1,2-4.42,5.18-4.85,8.61a7.7,7.7,0,0,0-.18,3.08c0,.85.05,1.7.12,2.53C17.64,62.79,16.38,68.48,21.3,70.09Zm3.32-31.76c.45-2.31,2.09-4.22,3.66-5.88l.22-.23a28.08,28.08,0,0,1,9.93-4.84,9.29,9.29,0,0,1,6.47.32,5.26,5.26,0,0,1,3,4.71c.11,4.14-3.33,7-6.68,8.76-.74.39-1.51.73-2.29,1a24.57,24.57,0,0,1-8.42,1.32.94.94,0,0,1-.15-.06,7.25,7.25,0,0,0-3.14-.25C25.14,42.66,24.23,40.32,24.62,38.33ZM21.29,61.24A8.41,8.41,0,0,0,26.4,59c1.43-1.34,3-3.55,2.71-5.61A3.07,3.07,0,0,0,25.06,51a7.18,7.18,0,0,0-3.42,2.33,9.33,9.33,0,0,1,4.65-5.87c5.14-2.55,6.16,4.68,5.73,8.09A13.64,13.64,0,0,1,26.2,65c-1.54,1-3.93,2.4-5.12.17A4.25,4.25,0,0,1,21.29,61.24Zm.77-3.92a8.2,8.2,0,0,1,1.16-1.81c.5-.58,1.37-1.61,2.15-1.78,1-.22.76.52.51,1a3.43,3.43,0,0,1-1.1,1.14,19.19,19.19,0,0,1-2.38,1.24A3.65,3.65,0,0,0,22.06,57.32Z"/><path class="cls-1" d="M53.58,63.86a.79.79,0,0,0,.29-.21,11,11,0,0,0,.7-.89,7.37,7.37,0,0,0,2-5.22,4.75,4.75,0,0,0-1.25-2.91,2.47,2.47,0,0,0,1.8-3.09c-.67-1.7-3.46-1.36-3.15.63a1.28,1.28,0,0,0,.06.23c-.71.12-1.33-.81-1.47-1.4a5.59,5.59,0,0,1,0-2.34,12.52,12.52,0,0,1,1.81-4.31,36.89,36.89,0,0,1,6.36-7.19,42.13,42.13,0,0,1,16.36-9.67.72.72,0,0,0,.54-.65A.8.8,0,0,0,77,25.45a37.26,37.26,0,0,0-12.31,5.66,48.05,48.05,0,0,0-10,9c-2.1,2.6-4.35,6.32-4.21,9.89a6.35,6.35,0,0,0-1.15-1.24,6.16,6.16,0,0,0-7.59.18,11,11,0,0,0-3.16,4,11,11,0,0,0-1.11,2.62c-.15.42-.29.83-.44,1.23a.77.77,0,0,0,0,.42,10.24,10.24,0,0,0,.09,5.13c.64,2.18,2.23,4.44,4.68,4.63,2.67.21,5-2,6.52-3.89a17.12,17.12,0,0,0,2.92-5.62,3,3,0,0,1,1.4-1.21,1.51,1.51,0,0,1,1.93,1.3,5.52,5.52,0,0,1-1.18,4.17l-.15.18-.32.36c-.19.2-.4.43-.64.66a5.57,5.57,0,0,1-1.22.9,1.53,1.53,0,0,1-1.64-.09c-.74-.5-1.6.63-.95,1.24a2.45,2.45,0,0,0,2.58.5h0l.19-.07a6.45,6.45,0,0,0,1.88-1.18Zm-10.47.19-.16,0c-2.92.49-4.09-2.15-4.22-4.6a10.63,10.63,0,0,1,.59-4,12.23,12.23,0,0,1,1.94-2.88.84.84,0,0,0,.3-.24,3.1,3.1,0,0,1,4.21-.43,5.08,5.08,0,0,1,1.89,4.26A9.94,9.94,0,0,1,43.11,64.05ZM51.7,53.5v0l0,0Z"/><path class="cls-1" d="M123.11,57.31A37.21,37.21,0,0,0,110.81,63a47.8,47.8,0,0,0-10,9c-2.42,3-5,7.45-4,11.47a4.39,4.39,0,0,0,2.43,3,1.46,1.46,0,0,0-.32.1,3.4,3.4,0,0,0-.9.34c-.89.49-.1,1.84.79,1.36a1.23,1.23,0,0,1,.26-.12.84.84,0,0,0,.29-.08l.09,0a2.09,2.09,0,0,1,1.33.18l.07.06a.75.75,0,0,0,.07.12c1.42,2,1.84,5.29-.75,6.63a3.07,3.07,0,0,1-3.37-.47,4.17,4.17,0,0,1-1.23-4,.76.76,0,0,0-.25-.73,14.56,14.56,0,0,0-2.08-6.46.73.73,0,0,0-.87-.34c-.62-.19-1.39.44-.93,1.11l0,.07a.87.87,0,0,0,.1.25,9.54,9.54,0,0,1,1.08,7.9,6.5,6.5,0,0,1-5.57,4.37,6.19,6.19,0,0,1-5.6-3.7,7.16,7.16,0,0,1-.38-4.69c.9-2.86,3.44-5.42,6.63-4.71a.81.81,0,0,0,1-.89.72.72,0,0,0-.35-1.22,8.42,8.42,0,0,0-8.47,3.7,10.36,10.36,0,0,0-.64,10A8.41,8.41,0,0,0,87.44,100a8.85,8.85,0,0,0,6.22-3.9A4.65,4.65,0,0,0,97.38,99a6,6,0,0,0,5.89-3.24,7.83,7.83,0,0,0,.27-7.11,4.45,4.45,0,0,0-2.44-2.09l0,0c1.42-.29,2.76-1.65,2.17-3.18-.67-1.7-3.46-1.36-3.15.63a1.28,1.28,0,0,0,.06.23c-.71.12-1.33-.81-1.48-1.4a5.76,5.76,0,0,1,.06-2.34,12.52,12.52,0,0,1,1.81-4.31A36.89,36.89,0,0,1,106.9,69a42.13,42.13,0,0,1,16.36-9.67.74.74,0,0,0,.54-.65A.8.8,0,0,0,123.11,57.31Z"/><path class="cls-1" d="M77.48,60.06a4.25,4.25,0,0,1,1.74-3.42,3.14,3.14,0,0,1,3.74.08c2.24,1.87,1.08,5-.76,6.63l-.11.12-.07,0a2,2,0,0,1-1.35-.13l-.06,0a.8.8,0,0,0-.28-.16L80.12,63c-.75-.68-1.86.43-1.11,1.11a3.91,3.91,0,0,0,.77.53,2.68,2.68,0,0,0,2.21.42,4.47,4.47,0,0,0,2.83-1.46,7.8,7.8,0,0,0,1.38-7,6,6,0,0,0-5-4.52,4.7,4.7,0,0,0-4.34,2,8.87,8.87,0,0,0-4.07-4.76,8.18,8.18,0,0,0-9.38,1.57,10.32,10.32,0,0,0-2.86,9.13,8.51,8.51,0,0,0,7.79,7.12A.74.74,0,0,0,69,66.05.78.78,0,0,0,68.3,65c-3.24,0-5.12-3-5.4-6a7.37,7.37,0,0,1,1.25-4.37,6.26,6.26,0,0,1,6.45-2.57A6.46,6.46,0,0,1,75,57.32,9.41,9.41,0,0,1,72.21,65a1,1,0,0,0-.15.22l-.06.06a.78.78,0,0,0,.64,1.32.71.71,0,0,0,.91-.12,14.77,14.77,0,0,0,3.52-5.82A.75.75,0,0,0,77.48,60.06Z"/><path class="cls-1" d="M79.34,73.28a45.26,45.26,0,0,0-.64-7.16c-.17-1-1.69-.57-1.52.42a42.31,42.31,0,0,1,.59,6.74A.79.79,0,0,0,79.34,73.28Z"/><path class="cls-1" d="M85,69c.44.91,1.8.11,1.36-.79-1.07-2.22,1.26-4.17,3.38-3.78s3.53,2.65,3.6,4.78a4.37,4.37,0,0,1-.61,2.45c-.71,1.06-2,1.12-3.11,1.25l-7.07.8a65.52,65.52,0,0,0-.49-7.54c-.13-1-1.7-1-1.57,0a65.6,65.6,0,0,1,.5,8.52.77.77,0,0,0,1.21.63l5.94-.67c1.49-.17,3.33-.12,4.66-.92,2.32-1.4,2.49-4.74,1.59-7-1-2.63-3.8-4.55-6.67-3.73A4.34,4.34,0,0,0,85,69Z"/><path class="cls-1" d="M34.56,82.72a6.3,6.3,0,0,0-1-.56,7.3,7.3,0,0,0-2.05-.88,5.44,5.44,0,0,0-4,.66h0a6.2,6.2,0,0,0-3.21,3.3,5.67,5.67,0,0,0-2.53-1.94,5.92,5.92,0,0,0-7.54,3.24.83.83,0,0,0-.05.51c-.28.86,1,1.57,1.39.69a5.1,5.1,0,0,1,3.34-3,3.33,3.33,0,0,1,3.79,1.74,6.61,6.61,0,0,1-.63,6,2.68,2.68,0,0,0-.76-2C17.4,86.27,9,94.28,13.16,98.24c2,1.93,5.45.69,7.46-.65A11.29,11.29,0,0,0,24.57,93a10,10,0,0,0,2.51,3.54C30.52,99.62,36,99.35,38.27,95S38.39,85.26,34.56,82.72ZM18.15,95.2l-.34.21c-.63.36-2.56,1.4-2.92.24-.24-.76,1-2.17,1.49-2.66A2.36,2.36,0,0,1,19,92.21a1.36,1.36,0,0,1,.51.36C19.71,93.47,18.91,94.47,18.15,95.2ZM35.05,95a1.42,1.42,0,0,1-.12.13c-3.05,3.07-7.77-.73-9-3.82a6.11,6.11,0,0,1-.4-2.85,6.13,6.13,0,0,1,2.32-3.42,4.17,4.17,0,0,1,.46-.26,3.9,3.9,0,0,1,3.25.42,9.09,9.09,0,0,1,4,5A6.22,6.22,0,0,1,35.05,95Z"/><path class="cls-1" d="M6.3,92.55c-1,.72-2.27,3.77,0,3.71.54,0,.77-.31,1.15-.62s.19-.48.77-.46a1,1,0,0,1,.88,1c.08,1.34-1.28,1.87-2.48,2.05C3.74,98,2.47,94.58,3,92.07c1.1-5.53,6.77-9.48,12.13-10a.85.85,0,0,0,.73-1A.82.82,0,0,0,15,79.81,23.52,23.52,0,0,0,3,86.42c-2.81,3.1-4.32,8-1.63,11.64,2.14,2.91,6.59,3.69,9.1.75a4.44,4.44,0,0,0,.42-5.29A3.39,3.39,0,0,0,6.3,92.55Z"/><path class="cls-1" d="M44.84,81.82a2.81,2.81,0,0,0-3.25.89A3,3,0,0,0,41,84.25a.68.68,0,0,0-.08.63l.13.37a3.13,3.13,0,0,0,.37,1c1.12,1.92,4.33,3.52,6,1.38S47.1,82.55,44.84,81.82Zm-.33,3.86c-.32-.22-1.37-1.69-.4-1.63a.58.58,0,0,0,.19,0l.21.1a4.81,4.81,0,0,1,1,.64,1.45,1.45,0,0,1,.33.5.42.42,0,0,1,0,.16C45.72,86.09,44.9,85.94,44.51,85.68Z"/><path class="cls-1" d="M44.84,90.64a2.79,2.79,0,0,0-3.25.89A3,3,0,0,0,41,93.07a.67.67,0,0,0-.08.63l.13.36a3.19,3.19,0,0,0,.37,1c1.12,1.91,4.33,3.52,6,1.37S47.1,91.37,44.84,90.64Zm-.33,3.85c-.32-.22-1.37-1.68-.4-1.62a1.08,1.08,0,0,0,.19,0l.21.11a4.7,4.7,0,0,1,1,.63,1.67,1.67,0,0,1,.33.5.45.45,0,0,1,0,.16C45.72,94.9,44.9,94.75,44.51,94.49Z"/><path class="cls-1" d="M91.87,49.29a3.26,3.26,0,0,0,.36,1c1.13,1.91,4.34,3.52,6,1.37s-.33-5-2.6-5.77a2.79,2.79,0,0,0-3.24.9,3,3,0,0,0-.59,1.54.67.67,0,0,0-.07.63C91.78,49.05,91.82,49.17,91.87,49.29Zm3-1.19a1.08,1.08,0,0,0,.19,0,1,1,0,0,1,.21.11,4.73,4.73,0,0,1,1,.63,1.42,1.42,0,0,1,.32.5.3.3,0,0,1,0,.16c-.09.66-.91.51-1.31.25S93.94,48,94.91,48.1Z"/><path class="cls-1" d="M91.87,58.11a3.11,3.11,0,0,0,.36,1c1.13,1.92,4.34,3.52,6,1.38s-.33-5-2.6-5.77a2.79,2.79,0,0,0-3.24.89,3.06,3.06,0,0,0-.59,1.54.68.68,0,0,0-.07.63C91.78,57.86,91.82,58,91.87,58.11Zm3-1.2a.58.58,0,0,0,.19,0,1,1,0,0,1,.21.1,4.84,4.84,0,0,1,1,.64,1.48,1.48,0,0,1,.32.49.33.33,0,0,1,0,.17c-.09.65-.91.51-1.31.24S93.94,56.85,94.91,56.91Z"/><path class="cls-1" d="M70.49,97.67l.11-.08A10.9,10.9,0,0,0,75.23,91c.7-3.14-.4-6.44-3.55-7.7a5.92,5.92,0,0,0-7.54,3.24.83.83,0,0,0,0,.51c-.28.86,1,1.57,1.39.69a5.1,5.1,0,0,1,3.34-3,3.33,3.33,0,0,1,3.79,1.74,6.61,6.61,0,0,1-.63,6,2.68,2.68,0,0,0-.76-2c-3.83-4.2-12.23,3.81-8.07,7.77a4.6,4.6,0,0,0,4.57.71,1.56,1.56,0,0,0-.11.26,2.4,2.4,0,0,0,2.21,2.92,2,2,0,0,0,2.12-1.82,7.07,7.07,0,0,1,1.35,1.21,5,5,0,0,1,.95,3,6.16,6.16,0,0,1-3.51,5.2c-4.61,2.33-9.81-.62-12.84-4.13a13.38,13.38,0,0,1-3.15-6.35,16,16,0,0,1,.78-7.64A34.59,34.59,0,0,1,62.09,80a37.06,37.06,0,0,1,9.72-8.1c.65-.34,1.31-.66,2-1,.89-.4.19-1.66-.68-1.39a.77.77,0,0,0-.41.08c-.53.27-1,.56-1.56.85a39.39,39.39,0,0,0-11.9,9.41c-3.82,4.45-7.38,10.21-7.7,16.22-.32,5.85,3.23,11.59,7.9,14.92S71.12,115,75,110.19a8,8,0,0,0,1.45-8.09A7.18,7.18,0,0,0,70.49,97.67ZM68.14,95.2l-.34.21c-.63.36-2.57,1.4-2.93.24-.23-.76,1-2.17,1.5-2.66a2.36,2.36,0,0,1,2.57-.78,1.36,1.36,0,0,1,.51.36C69.7,93.47,68.9,94.47,68.14,95.2Z"/><path class="cls-2" d="M62.83,116.09a179.88,179.88,0,0,1-12.42,23.08,35.45,35.45,0,0,1-2.27,3.05c-.28.33-.86.41-1.3.6a3.19,3.19,0,0,1-.28-1.31c.9-4.12,1.59-8.33,2.87-12.36,1.76-5.51,3.64-11,5.55-16.47A18,18,0,0,0,62.83,116.09Z"/><path class="cls-3" d="M96.2,3.54c-.82,3.79-3.38,6.81-5.06,10.74l3.65-1.91c-.41,1.91-.73,3.41-1.12,5.27l4.22-2.46c-.15,1.79-.26,3.22-.42,5.11l3.58-4c.27,1.47.47,2.51.68,3.64,1.54-1.74,1.75-6.14.09-10.38C100.53,6.23,98.69,3.13,97.13,0c-.09,0,.13,0,.24.05,4.48,4,7.6,8.71,7.77,14.85.23,7.85-3.91,13-11.64,15-3,.78-3,.78-4.46-2-2.57-5.07-2.69-10.16.3-15.06,2-3.27,4.29-6.35,6.46-9.51Z"/><path class="cls-2" d="M90.37,38.59c-1.16,3.43-2.22,6.6-3.31,9.84-3.73-1.49-6.53.19-9.31,2.36q2.7-5.38,5.39-10.79a21.23,21.23,0,0,0,1-2.08c.48-1.31,1.26-1.51,2.45-.94S89,38,90.37,38.59Z"/><path class="cls-2" d="M87.91,30.89c1.12,1.49,2.34,2.25,4.29,1.71-.4,1.36-.75,2.53-1.13,3.81l-5-2Z"/><path class="cls-2" d="M115.06,38a41.9,41.9,0,0,1,4.6,3.08c1.27,1,2.5,2.12,3.79,3.12s2.75,2.19,4.07,3.34,2.59,2.1,3.84,3.2a48.24,48.24,0,0,1,3.71,3.58c.49.52,1,1.06,1.42,1.6.67.81.89,1.1,1.51,1.9l.1.13c.12.15.23.3.34.46l.66.92c.48.71.94,1.43,1.37,2.16s.74,1.31,1.07,2c.15.29.29.59.43.89s.16.34.23.51-.07-.2.1.24a29.92,29.92,0,0,1,1.4,4.55c.08.36.15.73.21,1.1l.09.55c0-.12-.06-.51,0,.07s.13,1.41.14,2.12,0,1.33-.05,2c0,.33-.07.66-.1,1,.05-.61,0-.18,0,0s-.08.49-.13.74a27.21,27.21,0,0,1-1,3.87c-.11.31-.23.62-.35.93-.2.52,0,.1,0,0-.07.16-.13.31-.2.46-.32.67-.67,1.33-1,2a19.28,19.28,0,0,1-1.05,1.66l-.28.39c.07-.09.32-.35,0,0s-.49.54-.75.8a17.55,17.55,0,0,1-1.36,1.23c-.39.33-.12.09,0,0l-.39.28c-.34.23-.68.46-1,.66a15.36,15.36,0,0,1-1.76.9c.51-.22-.36.13-.48.17l-1,.34c-2.61.8-5.31,1.2-8,1.82a16.93,16.93,0,0,0-7.66,3.55,12,12,0,0,0-2.57,3.28,13.81,13.81,0,0,0-1.39,4.39,21.4,21.4,0,0,0,.79,9.4c.46,1.63,1.06,3.22,1.61,4.82a26.61,26.61,0,0,1,1.11,5.23,16.05,16.05,0,0,1,0,4.6,13.65,13.65,0,0,1-.49,1.85c-.06.15-.38.92-.17.46-.15.32-.3.63-.47.94-.3.55-.67,1-1,1.57-.22.34.28-.31,0,0l-.29.36q-.34.41-.72.78c-.44.45-.91.88-1.4,1.29l-.38.31c.09-.07.47-.35,0,0l-.9.62a34.83,34.83,0,0,1-3.56,2l-.9.43-.47.2c.1,0,.6-.24.06,0s-1.33.51-2,.74a34.31,34.31,0,0,1-4,1.07c-.78.16-1.57.3-2.36.43l-.59.09c-.11,0-.63.09,0,0a14.74,14.74,0,0,0-1.88.31c-.76.21-1.52.4-2.3.55a5.86,5.86,0,0,1-.75.13L91,142.3a35.41,35.41,0,0,1-4.94,0,50.69,50.69,0,0,1-9.48-1.4A46.22,46.22,0,0,1,67.34,138q-2.22-1.08-4.35-2.36c-1.86-1.13-3.55,1.78-1.7,2.9a59.26,59.26,0,0,0,19.13,7.72A77.16,77.16,0,0,0,91,147.42c1.7.09,3.39.16,5.09.23a23.06,23.06,0,0,0,5.58-.8c5.84-1.24,11.78-3.81,15.8-8.36a17.29,17.29,0,0,0,4.12-7.8,18.72,18.72,0,0,0-1.41-11,48.13,48.13,0,0,1-3.16-9.85c-.49-2.72-.53-5.71,1.2-8a6.4,6.4,0,0,1,.65-.73l.33-.32c.53-.49-.15.08.18-.15a15.08,15.08,0,0,1,1.65-1c.26-.15.53-.28.8-.42.65-.33-.27.1.14-.06l.43-.17a17.91,17.91,0,0,1,1.89-.58c2.75-.71,5.54-1.16,8.3-1.81a21.79,21.79,0,0,0,8.09-3.53,23.42,23.42,0,0,0,6.17-6.83,24.65,24.65,0,0,0,2.28-18.39,35.67,35.67,0,0,0-10.5-17.14A43.38,43.38,0,0,0,130,44.32a72.86,72.86,0,0,0-9.76-4.27,49.89,49.89,0,0,1-5.08-2.24c-.16-.07-.29.14-.14.23Z"/><path class="cls-2" d="M75.89,12.42a4.38,4.38,0,0,0-.37-1.09,7,7,0,0,0-.82-1,15.26,15.26,0,0,0-2.42-2,41.8,41.8,0,0,0-5.12-2.93A42,42,0,0,0,55.94,2.1a46,46,0,0,0-12.06-.58A46.35,46.35,0,0,0,32.31,4.14a42,42,0,0,0-19,14.08,46.74,46.74,0,0,0-8.68,21,39.43,39.43,0,0,0,.17,13.14,59.78,59.78,0,0,0,1.5,6c.31,1,.65,2,1,3.06A7,7,0,0,0,9,64.23a.82.82,0,0,0,1.39-.57A8,8,0,0,0,9.85,61c-.3-.86-.58-1.73-.82-2.6a29,29,0,0,1-.93-5.23,57.52,57.52,0,0,1,.22-10.66A43.36,43.36,0,0,1,15.43,22.9,39.28,39.28,0,0,1,31.36,9.17,42.46,42.46,0,0,1,41.88,5.93,58.23,58.23,0,0,1,52.65,5.3,37.26,37.26,0,0,1,64.76,7.83a50.51,50.51,0,0,1,5.56,2.38c.91.47,1.84.94,2.75,1.42.45.23.9.4,1.37.59a4,4,0,0,0,1.43.23s0,0,0,0Z"/><path class="cls-2" d="M23.83,103.35a2.25,2.25,0,0,0-.15,1.28,5.18,5.18,0,0,0,.81,1.67c.69,1,1.52,2,2.3,2.94,1.58,1.94,3.29,3.74,5.05,5.51s3.51,3.38,5.35,5c1,.83,1.94,1.65,2.92,2.45s2.23,2.18,3.45,2.37a2,2,0,0,0,2.19-2.85c-.48-1.06-1.93-1.81-2.84-2.54s-1.91-1.52-2.84-2.31c-1.87-1.56-3.69-3.19-5.48-4.84s-3.53-3.38-5.29-5.06c-.84-.81-1.63-1.67-2.5-2.44a6.13,6.13,0,0,0-1.53-1.1,2.27,2.27,0,0,0-1.36-.12.1.1,0,0,0-.08.06Z"/></g></g></svg>                </a>
+                    <span class="text-white">စိတ်ကူးဆေးခြယ်</span>
+
+
+
+                    <!-- Nav Links -->
+                    <div class="relative hidden lg:flex items-center ml-auto">
+                        <nav class="text-sm leading-6 font-semibold text-slate-700 dark:text-slate-200">
+                            <ul class="flex space-x-8">
+                                <li><a class="hover:text-sky-500 dark:hover:text-sky-400"
+                                       href="/docs/installation">Docs</a></li>
+                                <li><a href="https://tailwindui.com/?ref=top"
+                                       class="hover:text-sky-500 dark:hover:text-sky-400">Components</a></li>
+                                <li><a class="hover:text-sky-500 dark:hover:text-sky-400" href="/blog">Blog</a>
+                                </li>
+                                <li><a class="hover:text-sky-500 dark:hover:text-sky-400"
+                                       href="/showcase">Showcase<span
+                                        class="ml-2 font-medium text-xs leading-5 rounded-full text-sky-600 bg-sky-400/10 px-2 py-0.5 dark:text-sky-400">New</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div
+                                class="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
+                            <label class="sr-only" id="headlessui-listbox-label-8"
+                            >Theme</label>
+                            <button type="button"
+                                    id="headlessui-listbox-button-9" aria-haspopup="true" aria-expanded="false"
+
+                                    aria-labelledby="headlessui-listbox-label-8 headlessui-listbox-button-9"><span
+                                    class="dark:hidden"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                                             stroke-linecap="round" stroke-linejoin="round"
+                                                             class="w-6 h-6">
+                                                <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                                                      class="stroke-slate-400 dark:stroke-slate-500"></path>
+                                                <path
+                                                        d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836"
+                                                        class="stroke-slate-400 dark:stroke-slate-500"></path>
+                                            </svg></span><span class="hidden dark:inline"><svg viewBox="0 0 24 24"
+                                                                                               fill="none"
+                                                                                               class="w-6 h-6">
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z"
+                                                      class="fill-transparent"></path>
+                                                <path
+                                                        d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z"
+                                                        class="fill-slate-400 dark:fill-slate-500"></path>
+                                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                                      d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z"
+                                                      class="fill-slate-400 dark:fill-slate-500"></path>
+                                            </svg></span></button>
+                            <a href="https://github.com/tailwindlabs/tailwindcss"
+                               class="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"><span
+                                    class="sr-only">Tailwind CSS on GitHub</span>
+                                <svg viewBox="0 0 16 16"
+                                     class="w-5 h-5" fill="currentColor" aria-hidden="true">
+                                    <path
+                                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                                    </path>
+                                </svg>
+                            </a></div>
+
+                    </div>
+                    <button type="button"
+                            class="ml-auto text-slate-500 w-8 h-8 -my-1 flex items-center justify-center hover:text-slate-600 lg:hidden dark:text-slate-400 dark:hover:text-slate-300"><span
+                            class="sr-only">Search</span>
+                        <svg width="24" height="24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                             stroke-linejoin="round" aria-hidden="true">
+                            <path d="m19 19-3.5-3.5"></path>
+                            <circle cx="11" cy="11" r="6"></circle>
+                        </svg>
+                    </button>
+
+                    <div class="ml-2 -my-1 lg:hidden">
+                        <button type="button"
+                                class="text-slate-500 w-8 h-8 flex items-center justify-center hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"><span
+                                class="sr-only">Navigation</span>
+                            <svg width="24" height="24" fill="none"
+                                 aria-hidden="true">
+                                <path
+                                        d="M12 6v.01M12 12v.01M12 18v.01M12 7a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                            </svg>
+                        </button>
+                        <div
+                                style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+            <!-- Mobile Nav  -->
+            <div class="flex items-center p-4 border-b border-slate-900/10 lg:hidden dark:border-slate-50/[0.06]">
+                <button type="button"
+                        class="sidebar-button2 text-slate-500 hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"><span
+                        class="sr-only">Navigation</span>
+                    <svg width="24" height="24">
+                        <path d="M5 6h14M5 12h14M5 18h14" fill="none" stroke="currentColor" stroke-width="2"
+                              stroke-linecap="round"></path>
+                    </svg>
+                </button>
+                <ol class="ml-4 flex text-sm leading-6 whitespace-nowrap min-w-0">
+                    <li class="flex items-center">Getting Started
+                        <svg width="3" height="6" aria-hidden="true"
+                             class="mx-3 overflow-visible text-slate-400">
+                            <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                  stroke-linecap="round"></path>
+                        </svg>
+                    </li>
+                    <li class="font-semibold text-slate-900 truncate dark:text-slate-200">Installation</li>
+                </ol>
+            </div>
+           
+        </div>
+    </div>
+
+
+
+        <!-- Main Layout  -->
+        <div class="max-w-8xl mx-auto px-4 sm:px-6   md:px-8 container">
+
+            <!-- Desktop Sidebar Area Start-->
+            <div class="overflow-y-scroll pt-5 hidden 
+            lg:block fixed z-20 inset-0 top-[3.8125rem] 
+            left-[max(0px,calc(50%-45rem))] right-auto w-[18rem] 
+            pb-10 px-8 scrollbar-thin bg-slate-300">
+               <span>Sidebar Area</span>
+            </div>
+
+
+            <!-- Content Area Start  -->
+            <div class="lg:pl-[19.8rem] bg-blue-500">
+                <main class="max-w-3xl mx-auto pt-10 xl:max-w-none xl:ml-0 md:mr-[8rem] lg:mr-[10rem] xl:pr-40 md:pr-30" >
+
+                    <section class="relative bg-green-600 py-4 max-w-xl text-center">
+                      
+                    </section>
+
+                    <section class="mb-16 relative bg-yellow-500">
+                        <div class="relative z-10">
+                            <h2 data-docsearch-ignore="true"
+                                class="text-slate-900 text-xl tracking-tight font-bold mb-3 dark:text-slate-200">
+                                ထည့်သွင်းချင်း</h2>
+
+                            <!-- Tabs  -->
+                            <div class="bg-purple-600 flex overflow-auto mb-6 -mx-4 sm:-mx-6">
+                                <div class="flex-none min-w-full px-4 sm:px-6">
+                                    <ul
+                                            class="border-b border-slate-200 space-x-6 flex whitespace-nowrap dark:border-slate-200/5">
+                                        <li>
+                                            <h2>
+                                                <a class="flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-sky-500 border-current"
+                                                   href="/docs/installation">ဌေးဝင်း CLI</a></h2>
+                                        </li>
+                                        <li>
+                                            <h2>
+                                                <a class="flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700"
+                                                   href="/docs/installation/using-postcss">စာတိုက် CSS သုံးပါ</a>
+                                            </h2>
+                                        </li>
+                                        <li>
+                                            <h2>
+                                                <a class="flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700"
+                                                   href="/docs/installation/framework-guides">ဖရိန်းဝေါ့
+                                                    လမ်းညွန်</a></h2>
+                                        </li>
+                                        <li>
+                                            <h2>
+                                                <a class="flex text-sm leading-6 font-semibold pt-3 pb-2.5 border-b-2 -mb-px text-slate-900 border-transparent hover:border-slate-300 dark:text-slate-200 dark:hover:border-slate-700"
+                                                   href="/docs/installation/play-cdn">CDN ပေါ်တွင်လေ့လာပါ။</a></h2>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Tab end  -->
+                        </div>
+
+                        <!-- Intro ရေး  -->
+                        <div id="content-wrapper " class="relative w-full">
+                            <h3 class="sr-only">Installing Tailwind CLI</h3>
+                            <p>The simplest and fastest way to get up and running with Tailwind CSS from scratch
+                                is with the Tailwind CLI tool. The CLI is also available as a <a
+                                        href="/blog/standalone-cli">standalone executable</a> if you want to use it
+                                without installing Node.js.</p>
+                        </div>
+                        <div class="hidden sm:block absolute -z-10 top-0 left-[15%] pt-[40%] 2xl:left-[40%] 2xl:pt-[8%] dark:hidden">
+                            <img src="/_next/static/media/installation.50c59fdd.jpg" alt=""
+                                 class="w-[52.6875rem] max-w-none" decoding="async"></div>
+
+
+                        <!-- guide တွေကို ol နဲ့ပြသွားတယ်။  -->
+
+
+                      
+                        <!-- guide end  -->
+                    </section>
+
+                    <header id="header" class="mb-10 md:flex md:items-start">
+                       <div class="h-20 w-full bg-slate-900"> Test Header</div>
+                    </header>
+
+                    <!-- Section 2  -->
+                    <section class="relative">
+                       
+                    </section>
+                    <!-- Section 2 end  -->
+
+
+                    <section class="relative">
+                        <!--            Footer -->
+                <footer class="text-sm leading-6 mt-16">
+                    <div class="pt-10 pb-28 border-t border-slate-200 sm:flex justify-between text-slate-500 dark:border-slate-200/5">
+                        <div class="mb-6 sm:mb-0 sm:flex">
+                            <p>Copyright © 2023 Kyaw Ko Ko Labs Inc.</p>
+                            <p class="sm:ml-4 sm:pl-4 sm:border-l sm:border-slate-200 dark:sm:border-slate-200/5">
+                                <a class="hover:text-slate-900 dark:hover:text-slate-400" href="/brand">Trademark Policy</a></p>
+                        </div>
+
+
+                        <div class="flex space-x-10 text-slate-400 dark:text-slate-500">
+                            <a
+                                href="https://github.com/tailwindlabs/tailwindcss"
+                                class="hover:text-slate-500 dark:hover:text-slate-400"><span
+                                class="sr-only">GitHub</span>
+                            <svg width="25" height="24"
+                                 fill="currentColor">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M12.846 0c-6.63 0-12 5.506-12 12.303 0 5.445 3.435 10.043 8.205 11.674.6.107.825-.262.825-.585 0-.292-.015-1.261-.015-2.291-3.015.569-3.795-.754-4.035-1.446-.135-.354-.72-1.446-1.23-1.738-.42-.23-1.02-.8-.015-.815.945-.015 1.62.892 1.845 1.261 1.08 1.86 2.805 1.338 3.495 1.015.105-.8.42-1.338.765-1.645-2.67-.308-5.46-1.37-5.46-6.075 0-1.338.465-2.446 1.23-3.307-.12-.308-.54-1.569.12-3.26 0 0 1.005-.323 3.3 1.26.96-.276 1.98-.415 3-.415s2.04.139 3 .416c2.295-1.6 3.3-1.261 3.3-1.261.66 1.691.24 2.952.12 3.26.765.861 1.23 1.953 1.23 3.307 0 4.721-2.805 5.767-5.475 6.075.435.384.81 1.122.81 2.276 0 1.645-.015 2.968-.015 3.383 0 .323.225.707.825.585a12.047 12.047 0 0 0 5.919-4.489 12.537 12.537 0 0 0 2.256-7.184c0-6.798-5.37-12.304-12-12.304Z">
+                                </path>
+                            </svg>
+                        </a>
+
+                            <a href="/discord"
+                               class="hover:text-slate-500 dark:hover:text-slate-400"><span
+                                class="sr-only">Discord</span>
+                            <svg width="23" height="24"
+                                 fill="currentColor">
+                                <path
+                                        d="M9.555 9.23c-.74 0-1.324.624-1.324 1.385S8.827 12 9.555 12c.739 0 1.323-.624 1.323-1.385.013-.761-.584-1.385-1.323-1.385Zm4.737 0c-.74 0-1.324.624-1.324 1.385S13.564 12 14.292 12c.74 0 1.324-.624 1.324-1.385s-.584-1.385-1.324-1.385Z">
+                                </path>
+                                <path
+                                        d="M20.404 0H3.442c-.342 0-.68.065-.995.19a2.614 2.614 0 0 0-.843.536 2.46 2.46 0 0 0-.562.801c-.13.3-.197.62-.196.944v16.225c0 .324.066.645.196.944.13.3.321.572.562.801.241.23.527.412.843.537.315.124.653.189.995.19h14.354l-.67-2.22 1.62 1.428 1.532 1.344L23 24V2.472c0-.324-.066-.644-.196-.944a2.46 2.46 0 0 0-.562-.8A2.614 2.614 0 0 0 21.4.19a2.726 2.726 0 0 0-.995-.19V0Zm-4.886 15.672s-.456-.516-.836-.972c1.659-.444 2.292-1.428 2.292-1.428a7.38 7.38 0 0 1-1.456.707 8.67 8.67 0 0 1-1.836.517 9.347 9.347 0 0 1-3.279-.012 11.074 11.074 0 0 1-1.86-.516 7.621 7.621 0 0 1-.924-.409c-.039-.023-.076-.035-.113-.06-.027-.011-.04-.023-.052-.035-.228-.12-.354-.204-.354-.204s.608.96 2.215 1.416c-.38.456-.848.996-.848.996-2.797-.084-3.86-1.824-3.86-1.824 0-3.864 1.822-6.996 1.822-6.996 1.823-1.296 3.557-1.26 3.557-1.26l.127.145c-2.278.623-3.33 1.57-3.33 1.57s.279-.143.747-.347c1.355-.564 2.43-.72 2.873-.756.077-.012.14-.024.216-.024a10.804 10.804 0 0 1 6.368 1.129s-1.001-.9-3.153-1.526l.178-.19s1.735-.037 3.557 1.259c0 0 1.823 3.133 1.823 6.996 0 0-1.076 1.74-3.874 1.824Z">
+                                </path>
+                            </svg>
+                        </a></div>
+                    </div>
+                </footer>
+                    </section>
+                </main>
+
+
+                <!-- Right Side Bar  -->
+                <div class="fixed bg-red-500 z-20 top-[3.8125rem] 
+                    scrollbar-track-blue-700 scrollbar-small
+                    bottom-0 right-[max(0px,calc(50%-45rem))] w-[19.5rem] py-10 overflow-y-auto hidden xl:block">
+                    <div class="px-8">
+                        <h5 class="text-slate-900 font-semibold mb-4 text-sm leading-6 dark:text-slate-100">On this page</h5>
+                        <ul class="text-slate-700 text-sm leading-6">
+                            <li><a href="#theme-structure"
+                                    class="block py-1 font-medium hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300">Theme
+                                    structure</a></li>
+                            <li class="ml-4"><a href="#screens"
+                                    class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                                        width="3" height="24" viewBox="0 -9 3 24"
+                                        class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                                        <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round"></path>
+                                    </svg>Screens</a></li>
+                            <li class="ml-4"><a href="#colors"
+                                    class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                                        width="3" height="24" viewBox="0 -9 3 24"
+                                        class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                                        <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round"></path>
+                                    </svg>Colors</a></li>
+                            <li class="ml-4"><a href="#spacing"
+                                    class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                                        width="3" height="24" viewBox="0 -9 3 24"
+                                        class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                                        <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round"></path>
+                                    </svg>Spacing</a></li>
+                            <li class="ml-4"><a href="#core-plugins"
+                                    class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                                        width="3" height="24" viewBox="0 -9 3 24"
+                                        class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                                        <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round"></path>
+                                    </svg>Core plugins</a></li>
+                            <li><a href="#customizing-the-default-theme"
+                                    class="block py-1 font-medium font-medium text-sky-500 dark:text-sky-400">Customizing the default
+                                    theme</a></li>
+                            <li class="ml-4"><a href="#extending-the-default-theme"
+                                    class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                                        width="3" height="24" viewBox="0 -9 3 24"
+                                        class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                                        <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round"></path>
+                                    </svg>Extending the default theme</a></li>
+                            <li class="ml-4"><a href="#overriding-the-default-theme"
+                                    class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                                        width="3" height="24" viewBox="0 -9 3 24"
+                                        class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                                        <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round"></path>
+                                    </svg>Overriding the default theme</a></li>
+                            <li class="ml-4"><a href="#referencing-other-values"
+                                    class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                                        width="3" height="24" viewBox="0 -9 3 24"
+                                        class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                                        <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round"></path>
+                                    </svg>Referencing other values</a></li>
+                            <li class="ml-4"><a href="#referencing-the-default-theme"
+                                    class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                                        width="3" height="24" viewBox="0 -9 3 24"
+                                        class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                                        <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round"></path>
+                                    </svg>Referencing the default theme</a></li>
+                            <li class="ml-4"><a href="#disabling-an-entire-core-plugin"
+                                    class="group flex items-start py-1 text-sky-500 dark:text-sky-400"><svg width="3" height="24"
+                                        viewBox="0 -9 3 24"
+                                        class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                                        <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                            stroke-linecap="round"></path>
+                                    </svg>Disabling an entire core plugin</a></li>
+                            <li><a href="#configuration-reference"
+                                    class="block py-1 font-medium hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300">Configuration
+                                    reference</a></li>
+                        </ul>
+                    </div>
+                    <div class="mt-8 overflow-hidden">
+                        <div class="p-8"><a href="https://www.refactoringui.com/?ref=sidebar"
+                                class="relative block pt-80 -m-6 p-6 rounded-lg focus:outline-none focus:bg-slate-50 dark:focus:bg-slate-800/25"><img
+                                    class="pointer-events-none h-[673px] w-[536px] max-w-none absolute -top-[112px] -right-6"
+                                    src="/img/refactoring-ui-sidebar.png" alt="Refactoring UI by Adam Wathan and Steve Schoger"
+                                    decoding="async">
+                                <div>
+                                    <p class="text-[0.8125rem] font-semibold leading-5 text-sky-500 dark:text-sky-400">From the creators
+                                        of Tailwind CSS</p>
+                                    <p
+                                        class="mt-1 text-base font-bold tracking-tight leading-[1.375] text-slate-900 dark:text-slate-200">
+                                        Make your ideas look awesome, without relying on a designer.</p>
+                                    <figure class="mt-6 pl-4 border-l border-slate-100 dark:border-slate-700">
+                                        <blockquote class="text-sm leading-5 text-slate-600 dark:text-slate-400">“This is the survival
+                                            kit I wish I had when I started building apps.”</blockquote>
+                                        <figcaption class="mt-3 text-xs leading-5 text-slate-500">Derrick Reimer, <span
+                                                class="">SavvyCal</span></figcaption>
+                                    </figure>
+                                </div>
+                            </a></div>
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+
+
+
+
+
+</body>
+<script type="module" src="../main.js"></script>
+<script>
+    let sidebarBtn = document.querySelector(".sidebar-button");
+    let navBtn = document.querySelector(".sidebar-button2");
+    let body = document.querySelector("main");
+    let mainBody = document.querySelector("body")
+    let sidebar = document.querySelector(".sidebar");
+
+
+    navBtn.onclick = function () {
+        sidebar.classList.toggle("translate-x-[-1000px]");
+        console.log("sidebar btn 2 clicked")
+        mainBody.classList.toggle("overflow-y-hidden")
+    }
+
+    sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("translate-x-[-1000px]");
+        console.log("sidebar btn 1 clicked")
+        mainBody.classList.toggle("overflow-y-hidden")
+    }
+
+
+
+
+
+
+
+</script>
+
+</html>
