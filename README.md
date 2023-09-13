@@ -1,7 +1,7 @@
 ## Pages
 
 Tailwind Pure နဲ့ရေးထားတဲ့အစမ်း Projects တွေပါ။
-
+added on mac
 - animations (tailwind base)
 - blog 
 - components
